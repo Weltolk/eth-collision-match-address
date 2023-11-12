@@ -77,8 +77,6 @@ func LoadFromSourceFile() {
 		scanner := bufio.NewScanner(file)
 		for scanner.Scan() {
 			text := scanner.Text()
-			bloomFilter.AddString(text)
-			bloomFilter.AddString(strings.ToUpper(text))
 			bloomFilter.AddString(strings.ToLower(text))
 		}
 		if err := scanner.Err(); err != nil {

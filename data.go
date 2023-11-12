@@ -8,8 +8,8 @@ import (
 	"strings"
 )
 
-const n = 1000000000
-const fp = 0.00001
+const n = 400040400
+const fp = 0.000000001
 
 var bloomFilter = bloom.NewWithEstimates(n, fp)
 var modelFile = "../eth-address-all/model.bin"
@@ -65,6 +65,7 @@ func LoadFromSourceFile() {
 		"../eth-address-all/89M/datae.txt",
 		"../eth-address-all/89M/dataf.txt",
 		"../eth-address-top-list/address.txt",
+		"test.txt",
 	}
 	for _, filename := range sourceFileList {
 		log.Println("load file:", filename)

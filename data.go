@@ -12,7 +12,7 @@ const n = 400040400
 const fp = 0.000000001
 
 var bloomFilter = bloom.NewWithEstimates(n, fp)
-var modelFile = "../eth-address-all/model.bin"
+var modelFile = "model.bin"
 
 func LoadFromSourceFile() {
 	var sourceFileList = []string{

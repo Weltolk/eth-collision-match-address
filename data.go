@@ -112,10 +112,8 @@ func VerifyFromFile() {
 }
 
 func CheckDataInBloom(key string) bool {
-	a := bloomFilter.TestString(key)
-	b := bloomFilter.TestString(strings.ToUpper(key))
 	c := bloomFilter.TestString(strings.ToLower(key))
-	return a || b || c
+	return c
 }
 
 func GenerateModelFile() {
